@@ -29,6 +29,12 @@
     	animateIn: 'fadeIn',
 	});
 	
+	
+	/* magnificPopup video view */
+	$('.popup-video').magnificPopup({
+		type: 'iframe'
+	});
+	
 
 	//project-active
 	$('.project-active').owlCarousel({
@@ -60,13 +66,13 @@
 		}
 	});
 	
-	
+	/*
 	// counter 
 	$('.counter').counterUp({
 		delay: 10,
 		time: 10000
 	});
-	
+	*/
 	
 	//about-pro-active
 	$('.about-pro-active').owlCarousel({
