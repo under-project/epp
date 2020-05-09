@@ -29,12 +29,6 @@
     	animateIn: 'fadeIn',
 	});
 	
-	
-	/* magnificPopup video view */
-	$('.popup-video').magnificPopup({
-		type: 'iframe'
-	});
-	
 
 	//project-active
 	$('.project-active').owlCarousel({
@@ -102,6 +96,26 @@
 				items:1,
 			}
 		}
+	});
+
+
+
+	$(window).on('load', function() {
+		if (document.getElementById('portfolio')) {
+			var $workGrid = $('.portfolio-grid').isotope({
+				itemSelector: '.all',
+			});
+		}
+
+		$('.portfolio-filter ul li').on('click', function() {
+			$('.portfolio-filter ul li').removeClass('active');
+			$(this).addClass('active');
+
+				var data = $(this).attr('data-filter');
+				$workGrid.isotope({
+					filter: data
+				});
+		});
 	});
 
 })(jQuery);
