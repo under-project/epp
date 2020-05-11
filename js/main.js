@@ -9,6 +9,17 @@
 			$("#sticky-header").addClass("sticky");
 		}
 	});
+
+	
+	// mobile_menu
+	var menu = $('ul#navigation');
+	if(menu.length){
+		menu.slicknav({
+			prependTo: ".mobile_menu",
+			closedSymbol: '+',
+			openedSymbol:'-'
+		});
+	};
 	
 	
 	/*------------------
@@ -60,13 +71,6 @@
 		}
 	});
 	
-	/*
-	// counter 
-	$('.counter').counterUp({
-		delay: 10,
-		time: 10000
-	});
-	*/
 	
 	//about-pro-active
 	$('.about-pro-active').owlCarousel({
